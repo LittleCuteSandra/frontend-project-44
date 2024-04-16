@@ -8,5 +8,8 @@
   },
   "author": "Sandra",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "package-lock.json": "^1.0.0"
+  }
 }
