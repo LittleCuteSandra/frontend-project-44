@@ -11,5 +11,8 @@
   "type": "module",
   "dependencies": {
     "package-lock.json": "^1.0.0"
+  },
+  "bin": {
+    "brain-games": "bin/brain-games.js"
   }
 }
