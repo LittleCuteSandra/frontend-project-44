@@ -7,12 +7,12 @@ const isEven = (number) => number % 2 === 0;
 const randomNumber = () => Math.floor(Math.random() * 100) + 1;
 
 const getQuestionAndAnswer = () => {
-    const question = randomNumber();
-    const correctAnswer = isEven(question) ? 'yes' : 'no';
+  const question = randomNumber();
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
 
-    return [question, correctAnswer];
+  return [question, correctAnswer];
 };
 
 export default () => {
-    game(description, getQuestionAndAnswer);
+  game(description, getQuestionAndAnswer);
 };
