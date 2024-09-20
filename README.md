@@ -8,34 +8,44 @@ _collection of 5 games that tests arithmetic skills in your mind_
 ---
 
 #### Installation
-
+``` make install ```
 
 ---
 #### Usage
 
 - __Parity check (Brain-even)__
-    - start the game and demonstration of its positive outcome
+    - start the game
+    ``` brain-even ```
+    - demonstration a positive outcome of the game
     https://asciinema.org/a/oIL5o5cElUbW38AJ42xctyk6B
-    - start the game and demonstration of its negative outcome
+    - demonstration a negative outcome of the game
     https://asciinema.org/a/R19MV0F03IvdV7hpwKCXLbuc5
 - __Calculator (Brain-calc)__
-    - start the game and demonstration of its positive outcome
+    - start the game
+    ``` brain-calc ```
+    - demonstration a positive outcome of the game
     https://asciinema.org/a/RCrvhX8WAfHutwxdLWa3Dntbl
-    - start the game and demonstration of its negative outcome
+    - demonstration a negative outcome of the game
     https://asciinema.org/a/1qj4CJfVFfDydTO6PLMrrQBZ8
 - __Greatest common divisor (Brain-gcd)__
-    - start the game and demonstration of its positive outcome
+    - start the game
+    ``` brain-gcd ```
+    - demonstration a positive outcome of the game
     https://asciinema.org/a/BOT5qQIhYYwf0SGyNzKxpq1nq
-    - start the game and demonstration of its negative outcome
+    - demonstration a negative outcome of the game
     https://asciinema.org/a/ynr0KKAc5FfEhBoXpS4ZyU8er
 - __Arithmetic progression (Brain-progression)__
-    - start the game and demonstration of its positive outcome
+    - start the game
+    ``` brain-progression ```
+    - demonstration a positive outcome of the game
     https://asciinema.org/a/oT95tlwt8jCVyUcmIL5ZuCND5
-    - start the game and demonstration of its negative outcome
+    - demonstration a negative outcome of the game
     https://asciinema.org/a/EhMByqx5Y1DmhCjSJbffJTyyA
 - __Is a prime number? (Brain-prime)__
-    - start the game and demonstration of its positive outcome
+    - start the game
+    ``` brain-prime ```
+    - demonstration a positive outcome of the game
     https://asciinema.org/a/uIPBJwip9ildhUE5xTRxKKmEQ
-    - start the game and demonstration of its negative outcome
+    - demonstration a negative outcome of the game
     https://asciinema.org/a/zjNi2PP6CAxA9ATXpH45BMrbb
 
