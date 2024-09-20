@@ -9,7 +9,7 @@ const isPrime = (number) => {
   let divider = 2;
   while (divider <= number / 2) {
     if (number % divider === 0) {
-        return false;
+      return false;
     }
     divider += 1;
   }

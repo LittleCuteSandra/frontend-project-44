@@ -8,7 +8,7 @@ const getNOD = (firstNum, secondNum) => {
   let nod = 1;
   for (let i = 1; i < Math.min(firstNum, secondNum); i += 1) {
     if ((firstNum % i === 0) && (secondNum % i === 0)) {
-        nod = i;
+      nod = i;
     }
   }
   return nod;
