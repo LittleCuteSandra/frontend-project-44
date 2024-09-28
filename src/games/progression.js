@@ -19,7 +19,7 @@ const getRandomProgressionLine = () => {
 
 const getQuestionAndAnswer = () => {
   const progressionLine = getRandomProgressionLine();
-  const randomMissedPosition = getRandomNumber(1, progressionLine.length);
+  const randomMissedPosition = getRandomNumber(1, progressionLine.length - 1);
   const correctAnswer = (progressionLine[randomMissedPosition]).toString();
   progressionLine[randomMissedPosition] = '..';
 
