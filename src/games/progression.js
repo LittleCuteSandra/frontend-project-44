@@ -1,13 +1,12 @@
 import game from '../index.js';
+import getRandomNumber from '../utils/random.js';
 
 const description = 'What number is missing in the progression?';
 
-const randomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-
-const getQuestionAndAnswer = () => {
-  const randomProgressionStart = randomNumber(1, 15);
-  const randomProgressionStep = randomNumber(1, 10);
-  const randomProgressionLength = randomNumber(5, 10);
+const getRandomProgressionLine = () => {
+  const randomProgressionStart = getRandomNumber(1, 15);
+  const randomProgressionStep = getRandomNumber(1, 10);
+  const randomProgressionLength = getRandomNumber(5, 10);
 
   const progression = [randomProgressionStart];
 
@@ -15,11 +14,16 @@ const getQuestionAndAnswer = () => {
     progression.push(progression[progression.length - 1] + randomProgressionStep);
   }
 
-  const randomMissedPosition = randomNumber(1, randomProgressionLength);
-  const correctAnswer = (progression[randomMissedPosition]).toString();
-  progression[randomMissedPosition] = '..';
+  return progression;
+};
 
-  const question = progression.join(' ');
+const getQuestionAndAnswer = () => {
+  const progressionLine = getRandomProgressionLine();
+  const randomMissedPosition = getRandomNumber(1, progressionLine.length);
+  const correctAnswer = (progressionLine[randomMissedPosition]).toString();
+  progressionLine[randomMissedPosition] = '..';
+
+  const question = progressionLine.join(' ');
   return [question, correctAnswer];
 };
 

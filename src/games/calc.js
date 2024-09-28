@@ -1,32 +1,30 @@
 import game from '../index.js';
+import getRandomNumber from '../utils/random.js';
 
 const description = 'What is the result of the expression?';
 
-const randomNumber = () => Math.floor(Math.random() * 100) + 1;
+const operations = ['+', '-', '*'];
 
-const randomOperation = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+const doOperation = (firstNumber, secondNumber, operation) => {
+  switch (operation) {
+    case '+':
+      return firstNumber + secondNumber;
 
-const operations = [
-  {
-    operation: '+',
-    doOperation: (numFirst, numSecond) => numFirst + numSecond,
-  },
-  {
-    operation: '-',
-    doOperation: (numFirst, numSecond) => numFirst - numSecond,
-  },
-  {
-    operation: '*',
-    doOperation: (numFirst, numSecond) => numFirst * numSecond,
-  },
-];
+    case '-':
+      return firstNumber - secondNumber;
+
+    case '*':
+      return firstNumber * secondNumber;
+  }
+};
+
 
 const getQuestionAndAnswer = () => {
-  const ranFirstNum = randomNumber();
-  const ranSecondNum = randomNumber();
-  const randomOperationObj = operations[randomOperation(0, 2)];
-  const question = `${ranFirstNum} ${randomOperationObj.operation} ${ranSecondNum}`;
-  const correctAnswer = (randomOperationObj.doOperation(ranFirstNum, ranSecondNum)).toString();
+  const firstNumber = getRandomNumber(1, 100);
+  const secondNumber = getRandomNumber(1, 100);
+  const randomOperation = operations[getRandomNumber(0, operations.length - 1)];
+  const question = `${firstNumber} ${randomOperation} ${secondNumber}`;
+  const correctAnswer = (doOperation(firstNumber, secondNumber, randomOperation)).toString();
 
   return [question, correctAnswer];
 };
