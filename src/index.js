@@ -23,4 +23,5 @@ export default (description, getQuestionAndAnswer) => {
     }
   }
   console.log(`Congratulations, ${userName}!`);
+  return true;
 };

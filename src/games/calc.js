@@ -15,9 +15,11 @@ const doOperation = (firstNumber, secondNumber, operation) => {
 
     case '*':
       return firstNumber * secondNumber;
+
+    default:
+      return "There isn't such operation";
   }
 };
-
 
 const getQuestionAndAnswer = () => {
   const firstNumber = getRandomNumber(1, 100);
